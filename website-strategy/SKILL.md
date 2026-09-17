@@ -1,6 +1,6 @@
 ---
 name: website-strategy
-description: Plan and build a marketing/landing page for a product or service (agency site, SaaS landing page, campaign page, etc). Triggers on requests like "build a landing page", "make a website for my [product/service]", "I want a page to run ads on", or "redesign our landing page" — especially when the user has reference sites they like and real content (case studies, testimonials, brand assets) to draw from. Plans before coding: gathers references, asks clarifying questions, and gets the plan approved before writing any files.
+description: Plan and build a marketing/landing page for a product or service (agency site, SaaS landing page, campaign page, etc). Triggers on requests like "build a landing page", "make a website for my [product/service]", "I want a page to run ads on", or "redesign our landing page" — especially when the user has reference sites they like and real content (case studies, testimonials, brand assets) to draw from. Plans before writing code — gathers references, asks clarifying questions, and gets the plan approved before writing any files.
 ---
 
 # Website Strategy — Plan-First Landing Page Builder
