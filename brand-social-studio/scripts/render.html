@@ -1,0 +1,14 @@
+<!doctype html><html><body style="margin:0;background:#fff">
+<canvas id="c"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+const q = new URLSearchParams(location.search), page = +q.get("p") || 1, scale = +q.get("s") || 1;
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+pdfjsLib.getDocument(q.get("f")).promise.then(async (pdf) => {
+  document.title = "pages:" + pdf.numPages;
+  const pg = await pdf.getPage(page), vp = pg.getViewport({ scale });
+  const c = document.getElementById("c"); c.width = vp.width; c.height = vp.height;
+  await pg.render({ canvasContext: c.getContext("2d"), viewport: vp }).promise;
+  document.body.setAttribute("data-done", "1");
+});
+</script></body></html>
